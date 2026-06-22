@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto DCA Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Crypto Tool</p>
+        <h1>DCA Calculator</h1>
+        <p class="subtitle">See how a new buy changes your average price instantly.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Current Position</h2>
+      <label>
+        Amount already invested
+        <div class="input-wrap">
+          <span>$</span>
+          <input id="currentInvestment" type="number" inputmode="decimal" placeholder="2000" />
+        </div>
+      </label>
+
+      <label>
+        Current average buy price
+        <div class="input-wrap">
+          <span>$</span>
+          <input id="currentAverage" type="number" inputmode="decimal" placeholder="0.50" />
+        </div>
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>New Buy</h2>
+      <label>
+        New investment amount
+        <div class="input-wrap">
+          <span>$</span>
+          <input id="newInvestment" type="number" inputmode="decimal" placeholder="500" />
+        </div>
+      </label>
+
+      <label>
+        New buy price
+        <div class="input-wrap">
+          <span>$</span>
+          <input id="newPrice" type="number" inputmode="decimal" placeholder="0.25" />
+        </div>
+      </label>
+
+      <button id="calculateBtn">Calculate New Average</button>
+      <button id="resetBtn" class="secondary">Reset</button>
+    </section>
+
+    <section class="results" id="results">
+      <div class="result-main">
+        <p>New Average Price</p>
+        <strong id="newAverageResult">$0.0000</strong>
+      </div>
+
+      <div class="grid">
+        <div>
+          <p>Current Coins</p>
+          <strong id="currentCoinsResult">0</strong>
+        </div>
+        <div>
+          <p>New Coins Bought</p>
+          <strong id="newCoinsResult">0</strong>
+        </div>
+        <div>
+          <p>Total Invested</p>
+          <strong id="totalInvestedResult">$0.00</strong>
+        </div>
+        <div>
+          <p>Total Coins</p>
+          <strong id="totalCoinsResult">0</strong>
+        </div>
+      </div>
+
+      <p class="note" id="note">Enter your numbers and hit calculate.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
